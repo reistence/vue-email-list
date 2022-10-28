@@ -22,7 +22,7 @@ createApp({
       this.emailArray = [...this.temporaryArray];
     },
     reGetEmails() {
-      this.temporaryArray = [...this.regenArray];
+      this.temporaryArray = [];
       for (let index = 0; index < 10; index++) {
         axios
           .get("https://flynn.boolean.careers/exercises/api/random/mail")
@@ -30,7 +30,6 @@ createApp({
             this.temporaryArray.push(resp.data.response);
           });
       }
-
       return this.temporaryArray;
     },
     rePrintEmails() {
