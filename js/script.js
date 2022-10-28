@@ -5,7 +5,6 @@ createApp({
     return {
       emailArray: [],
       temporaryArray: [],
-      regenArray: [],
     };
   },
   methods: {
