@@ -5,6 +5,7 @@ createApp({
     return {
       emailArray: [],
       temporaryArray: [],
+      regenArray: [],
     };
   },
   methods: {
@@ -26,17 +27,18 @@ createApp({
         axios
           .get("https://flynn.boolean.careers/exercises/api/random/mail")
           .then((resp) => {
-            this.temporaryArray.push(resp.data.response);
+            this.regenArray.push(resp.data.response);
           });
       }
-      return this.temporaryArray;
+      return this.regenArray;
     },
     rePrintEmails() {
-      this.temporaryArray = [];
+      this.regenArray = [];
       this.emailArray = this.reGetEmails();
     },
   },
   created: function () {
     this.getEmails();
+    // this.reGetEmails();
   },
 }).mount("#app");
