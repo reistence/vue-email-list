@@ -37,23 +37,38 @@ main {
 main > * {
   margin-bottom: 1em;
 }
-.info {
+.info,
+.again {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1em auto;
   gap: 1em;
 }
-.info button {
+.info button,
+.again button {
   background-color: white;
   border: 1px solid black;
+  cursor: pointer;
 }
 
 .email-container {
   border: 1px solid black;
   border-radius: 20px;
   padding: 1em;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .email-container ul > * {
   margin-bottom: 1em;
+}
+
+.email-container ul li {
+  width: 90%;
+  margin: 1em auto;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
 }
